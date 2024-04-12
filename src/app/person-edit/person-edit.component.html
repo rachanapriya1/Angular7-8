@@ -1,0 +1,13 @@
+<!-- person-edit.component.html -->
+import { Person } from '../person.model'; 
+
+<h2>Edit Person</h2>
+<div *ngIf="person">
+  <label>Name: </label>
+  <input [(ngModel)]="person.name" placeholder="Name"><br>
+  <label>Age: </label>
+  <input [(ngModel)]="person.age" placeholder="Age"><br>
+  <label>Gender: </label>
+  <input [(ngModel)]="person.gender" placeholder="Gender"><br>
+  <button (click)="save()">Save</button>
+</div>

@@ -1,9 +1,17 @@
-import { ApplicationConfig } from '@angular/core';
-import { provideRouter } from '@angular/router';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutingModule } from './app.routes'; // Import the AppRoutingModule
+import { AppComponent } from './app.component';
 
-import { routes } from './app.routes';
-import { provideClientHydration } from '@angular/platform-browser';
-
-export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes), provideClientHydration()]
-};
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule // Add the AppRoutingModule to the imports array
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
